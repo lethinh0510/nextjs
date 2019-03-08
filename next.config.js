@@ -1,6 +1,3 @@
-// module.exports = {
-//   target: 'serverless'
-// }
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 
 module.exports = {
@@ -8,7 +5,6 @@ module.exports = {
     config.plugins.push(
       new SWPrecacheWebpackPlugin({
         verbose: true,
-        navigateFallback: '/index',
         staticFileGlobsIgnorePatterns: [/\.next\//],
         runtimeCaching: [
           {

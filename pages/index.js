@@ -1,7 +1,6 @@
-import Link from "next/link";
-import Header from "../components/header";
+import React from 'react'
 
-function Index() {
+export default class extends React.PureComponent {
   componentDidMount () {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker
@@ -14,16 +13,7 @@ function Index() {
         })
     }
   }
-  return (
-    <main>
-      <Header />
-      <section>
-        <Link href="/about">
-          <a>Go to About Me</a>
-        </Link>
-      </section>
-    </main>
-  );
+  render () {
+    return <p>Check the console for the Service Worker registration status.</p>
+  }
 }
-
-export default Index;
